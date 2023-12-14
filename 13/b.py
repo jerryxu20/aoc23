@@ -13,8 +13,6 @@ def check(A, B):
     return ans 
 
 def solve(grid):
-    print(grid)
-    print()
     cnt = defaultdict(int)
     diff = defaultdict(int)
     for row in grid:
