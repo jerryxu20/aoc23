@@ -1,0 +1,1 @@
+CPPFLAGS += -std=c++17 -Wall -O2 -o -Wno-unused-result
