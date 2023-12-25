@@ -1,1 +1,1 @@
-CPPFLAGS += -std=c++17 -Wshadow -Wall -o -Wno-unused-result
+CPPFLAGS += -std=c++17 -Wall -o -Wno-unused-result

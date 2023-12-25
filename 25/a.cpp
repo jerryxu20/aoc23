@@ -16,10 +16,6 @@ typedef vector<vi> vii;
 #define pb push_back
 
 
-const int MOD = 1000000007;
-const char nl = '\n';
-
-
 map<string, int> ID;
 vii adj;
 int N = 0;
@@ -30,6 +26,7 @@ int id(string &s) {
     return ID[s];
 }
 
+// https://github.com/kth-competitive-programming/kactl/blob/main/content/graph/Dinic.h
 struct Dinic {
 	struct Edge {
 		int to, rev;
@@ -76,7 +73,7 @@ struct Dinic {
 vs parse(string s) {
     vector<string> parts;
     string cur = "";
-    s += ' ';
+    s.pb(' ');
     trav(c, s) {
         if (c == ' ') {
             if (sz(cur)) parts.pb(cur);
@@ -88,9 +85,8 @@ vs parse(string s) {
     return parts;
 }
 
-int solve(int tt) {
+int solve() {
     string a, b;
-    char c;
     while(cin >> a) {
         a.pop_back();
         int u = id(a);
@@ -127,18 +123,10 @@ int solve(int tt) {
             } 
         }
     }
-
-
-    tt++;
     return 0;
 }
 
 int main() {
-    int T = 1;
-    // cin >> T;
-    for (int i = 1; i <= T; i++) {
-        if (solve(i)) break;
-    }
-    T++;
+    solve();
     return 0;
 }
